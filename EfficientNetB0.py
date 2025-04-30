@@ -61,6 +61,8 @@ model = Sequential([
     base_model,
     layers.GlobalAveragePooling2D(),
     layers.Dropout(0.3),
+    #one of the biggest problems here is that I put dropout = 0.3!
+    #it will be fixed in next iterations
     layers.Dense(len(class_names), activation="softmax"),
 ])
 
