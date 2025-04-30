@@ -95,6 +95,6 @@ Epoch 4/5
 Epoch 5/5
 84/84 ━━━━━━━━━━━━━━━━━━━━ 250s 3s/step - accuracy: 0.3293 - loss: 1.1260 - val_accuracy: 0.3333 - val_loss: 1.1174
 
-very low accuracy cause the model is classifying, which produces low Accuracy, so we have to switch to a detection model, not a classification model.
+very low accuracy.
 '''
 
