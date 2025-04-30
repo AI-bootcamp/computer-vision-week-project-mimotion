@@ -11,7 +11,7 @@ print("Data directory:", data_dir)
 import tensorflow as tf
 
 batch_size = 32
-img_size   = (260, 260)
+img_size = (260, 260)
 
 # datasets
 raw_train_ds = tf.keras.preprocessing.image_dataset_from_directory(
@@ -35,7 +35,6 @@ AUTOTUNE = tf.data.AUTOTUNE
 
 train_ds = (
     raw_train_ds
-    .repeat()               # infinite epochs
     .shuffle(512)           # shuffle buffer
     .cache()
     .prefetch(AUTOTUNE)
@@ -119,11 +118,11 @@ print(f"Validation accuracy after fine-tuning: {accuracy:.4%}")
 
 '''
 
-Getting stuck at ~33 % ==> the network isn’t actually learning anything one of causes is
+Getting stuck at ~33 % ==> the network isn’t actually learning anything, one ofthe causes is
 -Augmentations that destroy color information
 -Only training the top Dense layer
 -A frozen backbone + only 5 epochs on the head often isn’t enough 
 -Too much regularization
--Learning‐rate not tuned
+-Learning rate not tuned
 
 '''
