@@ -1,19 +1,13 @@
-![Face Emotion Detection Banner](https://i.imgur.com/KpLJdHD.png)
-
 # 😊 Face Emotion Detection using FER-2013
 
 This project is a machine learning-based application that detects human facial emotions from grayscale images using deep learning. It is built using the [FER-2013 dataset](https://www.kaggle.com/datasets/msambare/fer2013), a widely used dataset for facial expression recognition.
 
 ## 🔍 Project Overview
 
-The goal of this project is to classify facial expressions into one of the following seven categories:
+The goal of this project is to classify facial expressions into one of the following three categories:
 
-- **Angry**
-- **Disgust**
-- **Fear**
 - **Happy**
 - **Sad**
-- **Surprise**
 - **Neutral**
 
 To improve classification accuracy, we designed a hybrid deep learning model that combines **Convolutional Neural Networks (CNN)** for feature extraction and a **Multilayer Perceptron (MLP)** for final emotion classification. This combination enhances both spatial feature understanding and dense layer decision-making.
